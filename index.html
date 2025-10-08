@@ -41,7 +41,6 @@
             <h1>Tristan Dumoulin</h1>
             <h2>Développeur Full Stack</h2>
             <p>Étudiant à Zone 01 Normandie</p>
-            <p>Passionné par le développement web et la résolution de problèmes complexes. Formé à la pédagogie par projets avec des technologies modernes.</p>
             <div class="cta-buttons">
                 <a href="#projets" class="btn btn-primary">Voir mes projets</a>
                 <a href="#contact" class="btn btn-secondary">Me contacter</a>
@@ -53,9 +52,10 @@
         <h2 class="section-title">À propos</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Bonjour ! Je suis un développeur full stack en formation, passionné par la technologie et l'innovation.</p>
-                <p>Mon parcours me permet d'acquérir des compétences solides, tant côté front-end que back-end. J'aime relever de nouveaux défis et apprendre constamment de nouvelles technologies.</p>
-                <p>Mon objectif est de créer des applications web performantes, intuitives et qui répondent aux besoins réels des utilisateurs.</p>
+                <p>Bonjour ! Je suis Tristan et j'ai <span id="age"></span> ans</p>
+                <p>En formation j’apprends à concevoir des projets web du backend au frontend. J’aime comprendre comment tout fonctionne, chercher des solutions propres et apprendre en construisant.</p>
+                <p>En dehors du code, je suis un grand passionné de jeux vidéo (surtout les FPS), d’airsoft et de jeux de rôle. J’adore aussi le cinéma et les séries — surtout la science-fiction, le thriller et le fantastique — ainsi que la culture japonaise, pour sa créativité et son sens du détail.</p>
+                <p>J’aime les univers immersifs, qu’ils soient virtuels, narratifs ou techniques. C’est ce qui me motive autant dans le développement que dans mes passions : créer, explorer, et comprendre ce qu’il y a “derrière le décor”.</p>
             </div>
         </div>
         
@@ -169,7 +169,25 @@
         <p>&copy; 2025 Dumoulin Tristan - Développeur Full Stack. Tous droits réservés.</p>
     </footer>
 
+
+
     <script>
+    const birthDate = new Date("2004-05-02"); // ta date de naissance
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+
+         // ajuste si ton anniversaire n'est pas encore passé cette année
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+        }
+
+        document.getElementById("age").textContent = age;
+    </script>
+    <script>
+
+        
     // Copier l'email dans le presse-papiers
     const copyBtn = document.getElementById("copyEmailBtn");
     const copyBtn2 = document.getElementById("copyPhoneBtn");
