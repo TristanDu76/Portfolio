@@ -79,7 +79,7 @@
             <div class="skill-category">
                 <h3>Bases de données</h3>
                 <ul>
-                    <li>Sqlite3/li>
+                    <li>Sqlite3</li>
                 </ul>
             </div>
             <div class="skill-category">
@@ -96,10 +96,15 @@
     <section id="projets">
         <h2 class="section-title">Mes Projets</h2>
         <div class="projects-grid">
+
+
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/AsciiArtWeb.png" class="image"></img>
-                </div>
+                    <video autoplay muted loop class="video">
+                        <source src="assets/Ascii-Art-Web.webm" type="video/webm">
+                        <source src="assets/Ascii-Art-Web.mp4" type="video/mp4">
+                        Ton navigateur ne supporte pas la vidéo.
+                    </video>                </div>
                 <div class="project-content">
                     <h3>Ascii Art Web</h3>
                     <p>Application web écrite en Go qui permet de convertir du texte en ASCII art </p>
@@ -108,28 +113,57 @@
                         <span class="tag">HTML5 / CSS3</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/TristanDu76/Ascii-Art-Web.git" target="_blank">Voir le code</a>
+                        <a href="https://github.com/TristanDu76/Ascii-Art-Web" target="_blank">Voir le code</a>
+                        <a href="#demo1" class="demo-btn">Voir la démo</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="project-image">📱</div>
+                <div class="project-image">
+                    <video autoplay muted loop class="video">
+                        <source src="assets/lem-in.webm" type="video/webm">
+                        <source src="assets/lem-in.mp4" type="video/mp4">
+                        Ton navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
                 <div class="project-content">
-                    <h3>Application To-Do</h3>
-                    <p>Gestionnaire de tâches moderne avec authentification, catégories personnalisables et synchronisation temps réel.</p>
+                    <h3>Lem-in</h3>
+                    <p>Optimiseur de flux de fourmis - Un algorithme de recherche de chemins optimaux dans un graphe</p>
                     <div class="project-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">CSS3</span>
+                        <span class="tag">Golang</span>
+                        <span class="tag">Algo</span>
                     </div>
                     <div class="project-links">
-                        <a href="#">Voir le code</a>
-                        <a href="#">Démo live</a>
+                        <a href="https://github.com/TristanDu76/lem-in" target="_blank">Voir le code</a>
+                        <a href="#demo2" class="demo-btn">Voir la démo</a>
                     </div>
                 </div>
             </div>
 
+
+            <div class="project-card">
+                <div class="project-image">
+                    <video autoplay muted loop class="video">
+                        <source src="assets/net-cat.webm" type="video/webm">
+                        <source src="assets/net-cat.mp4" type="video/mp4">
+                        Ton navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+                <div class="project-content">
+                    <h3>Net-cat</h3>
+                    <p>Messagerie entre terminaux - Une solution de chat en temps réel via TCP</p>
+                    <div class="project-tags">
+                        <span class="tag">Golang</span>
+                        <span class="tag">TCP</span>
+                        <span class="tag">Unix</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/TristanDu76/net-cat" target="_blank">Voir le code</a>
+                        <a href="#demo3" class="demo-btn">Voir la démo</a>
+                    </div>
+                </div>
+            </div>
         
         </div>
     </section>
@@ -139,11 +173,12 @@
         <div class="contact-content">
             <p>Vous avez un projet en tête ou vous souhaitez simplement discuter ? N'hésitez pas à me contacter !</p>
             <div class="contact-links">
-                <button id="copyEmailBtn" class="contact-link" style="cursor: pointer;" class="a" href="mailto:dumoulin.tristan76@gmail.com">
-                    <span class="contact-icon" style="height: 51.19px; margin-top: 10px;">📧</span>
-                    <span style="height: 25.59px; font-size:1rem;">Email</span>
+                <a href="mailto:dumoulin.tristan76@gmail.com" id="copyEmailBtn" class="contact-link" style="cursor: pointer;">
+                    <span class="contact-icon">📧</span>
+                    <span>Email</span>
                     <span id="copiedMsg">Copié !</span>
-                </button>
+                </a>
+
                 <button id="copyPhoneBtn" class="contact-link" style="cursor: pointer;" class="a" href="tel:0651548222">
                     <span class="contact-icon" style="height: 51.19px; margin-top: 10px;">📱</span>
                     <span style="height: 25.59px; font-size:1rem;">Téléphone</span>
@@ -169,7 +204,30 @@
         <p>&copy; 2025 Dumoulin Tristan - Développeur Full Stack. Tous droits réservés.</p>
     </footer>
 
+                <!-- Modales vidéo -->
+    <div id="demo1" class="modal">
+            <a href="#" class="close">&times;</a>
+        <video controls autoplay>
+            <source src="assets/Ascii-Art-Web.webm" type="video/webm">
+            <source src="assets/Ascii-Art-Web.mp4" type="video/mp4">
+        </video>
+    </div>
 
+    <div id="demo2" class="modal">
+            <a href="#" class="close">&times;</a>
+        <video controls autoplay>
+            <source src="assets/lem-in.webm" type="video/webm">
+            <source src="assets/lem-in.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="demo3" class="modal">
+            <a href="#" class="close">&times;</a>
+        <video controls autoplay>
+            <source src="assets/net-cat.webm" type="video/webm">
+            <source src="assets/net-cat.mp4" type="video/mp4">
+        </video>
+    </div>
 
     <script>
     const birthDate = new Date("2004-05-02"); // ta date de naissance
@@ -185,6 +243,7 @@
 
         document.getElementById("age").textContent = age;
     </script>
+
     <script>
 
         
@@ -224,30 +283,81 @@
         });
         </script>
 
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+<script>
+  // Smooth scroll EXCLUDE les liens .demo-btn (modales)
+  document.querySelectorAll('a[href^="#"]:not(.demo-btn)').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      // si href === "#" on ignore
+      const href = this.getAttribute('href');
+      if (!href || href === "#") return;
 
-        // Navbar background on scroll
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {   
-        header.classList.remove('scrolled');
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      e.preventDefault();
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      // Mettre à jour l'URL sans recharger (optionnel)
+      history.pushState(null, null, href);
+    });
+  });
+</script>
+
+<script>
+// pause toutes les vidéos des modales puis joue celle ciblée (si nécessaire)
+function pauseAllModalVideos() {
+    document.querySelectorAll('.modal video').forEach(v => {
+        try { v.pause(); v.currentTime = 0; } catch(e) {}
+    });
+}
+
+// Bloquer le scroll du body
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+// Réactiver le scroll du body
+function enableScroll() {
+    document.body.style.overflow = '';
+}
+
+// Fermeture des modales sans remonter en haut
+document.querySelectorAll('.modal .close').forEach(close => {
+    close.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modal = close.closest('.modal');
+        if (!modal) return;
+
+        history.replaceState(null, '', ' ');
+        modal.style.display = 'none';
+        pauseAllModalVideos();
+        enableScroll(); // réactive le scroll
+    });
+});
+
+// Quand on ouvre une modal via hash change, on affiche le :target normalement
+window.addEventListener('hashchange', () => {
+    pauseAllModalVideos();
+    const target = document.querySelector(window.location.hash || '');
+    if (target && target.classList.contains('modal')) {
+        target.style.display = 'flex';
+        disableScroll(); // bloque le scroll
+        const video = target.querySelector('video');
+        if (video) {
+            try { video.play(); } catch(e) {}
+        }
+    } else {
+        enableScroll(); // réactive si aucune modal ciblée
     }
 });
-    </script>
+</script>
+
+
+
+
+
+
 </body>
 </html>
