@@ -74,22 +74,6 @@ body {
 
 }
 
-/* Background animé (radial avec nouvelles couleurs) */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(var(--primary-rgb), 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(var(--secondary-rgb), 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(var(--accent-rgb), 0.04) 0%, transparent 50%);
-    animation: backgroundMove 15s ease-in-out infinite;
-    z-index: 0;
-    pointer-events: none;
-}
 
 @keyframes backgroundMove {
     0%, 100% {
